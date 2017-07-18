@@ -1,17 +1,17 @@
 var fs = require('fs');
 var readline = require('readline');
 
-fuction processFile(filename){
+function processFile(filename){
     
-    var instream = fs.createReadStream(fileName);
-    var reader = fs.createInterface(instream, process.stdout);
+    var instream = fs.createReadStream(filename);
+    var reader = readline.createInterface(instream, process.stdout);
     
     var count = 0;
     
     //open files
     reader.on('line', function(line){
         
-        cosole.log('a line processed :' + line);
+        console.log('a line processed :' + line);
         count += 1;
         
         //clarifying with blanks
